@@ -62,68 +62,111 @@ export default function App() {
     }
   }, [cartItems]);
 
-  // Handle URL Hash navigation
-  useEffect(() => {
-    const handleHashRouting = () => {
-      const hash = window.location.hash;
+  // Helper for navigating with clean SEO URLs
+  const navigateTo = (urlPath: string) => {
+    // If the path is relative clean path like /service/buy-github-active-account
+    if (urlPath.startsWith('/')) {
+      window.history.pushState({}, '', urlPath);
+      handleRouting();
+    } else if (urlPath.startsWith('#')) {
+      // Convert legacy hash like #service/slug or #about to clean path
+      const cleanPath = urlPath.replace('#', '/');
+      window.history.pushState({}, '', cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`);
+      handleRouting();
+    } else {
+      window.history.pushState({}, '', `/${urlPath}`);
+      handleRouting();
+    }
+  };
 
-      if (!hash || hash === '#' || hash === '#/') {
+  const handleRouting = () => {
+    // 1. Check for single page app redirect from 404.html (e.g. ?/service/slug)
+    const search = window.location.search;
+    if (search.startsWith('?/')) {
+      const decodedPath = decodeURIComponent(search.slice(1)).replace(/~and~/g, '&');
+      window.history.replaceState(null, '', decodedPath + window.location.hash);
+    }
+
+    let pathname = window.location.pathname;
+    const hash = window.location.hash;
+
+    // Support legacy hash if someone lands on #service/slug
+    if (hash && hash.length > 1) {
+      const normalizedHash = hash.replace(/^#\/?/, '/');
+      if (normalizedHash.startsWith('/service/') || normalizedHash.startsWith('/category/') || normalizedHash === '/about' || normalizedHash === '/contact' || normalizedHash === '/faq' || normalizedHash.startsWith('/blog') || normalizedHash === '/privacy-policy' || normalizedHash === '/terms' || normalizedHash === '/refund-policy') {
+        window.history.replaceState(null, '', normalizedHash);
+        pathname = normalizedHash;
+      }
+    }
+
+    // Remove trailing slash except root
+    if (pathname.length > 1 && pathname.endsWith('/')) {
+      pathname = pathname.slice(0, -1);
+    }
+
+    if (!pathname || pathname === '/' || pathname === '') {
+      setActivePage('catalog');
+      setSelectedServiceId(null);
+      setSelectedBlogSlug(null);
+    } else if (pathname.startsWith('/service/')) {
+      const slugOrId = pathname.replace('/service/', '');
+      const found = getServiceByIdOrSlug(slugOrId);
+      if (found) {
+        setSelectedServiceId(found.id);
+        setActivePage('service');
+      } else {
+        setActivePage('404');
+      }
+    } else if (pathname.startsWith('/category/')) {
+      const cat = pathname.replace('/category/', '') as CategoryType;
+      if (['all', 'gmail', 'github', 'bank', 'other'].includes(cat)) {
+        setActiveCategory(cat);
         setActivePage('catalog');
-        setSelectedServiceId(null);
-        setSelectedBlogSlug(null);
-      } else if (hash.startsWith('#service/')) {
-        const slugOrId = hash.replace('#service/', '');
-        const found = getServiceByIdOrSlug(slugOrId);
-        if (found) {
-          setSelectedServiceId(found.id);
-          setActivePage('service');
-        } else {
-          setActivePage('404');
-        }
-      } else if (hash.startsWith('#category/')) {
-        const cat = hash.replace('#category/', '') as CategoryType;
-        if (['all', 'gmail', 'github', 'bank', 'other'].includes(cat)) {
-          setActiveCategory(cat);
-          setActivePage('catalog');
-          setSelectedServiceId(null);
-        } else {
-          setActivePage('404');
-        }
-      } else if (hash === '#about') {
-        setActivePage('about');
-        setSelectedServiceId(null);
-      } else if (hash === '#contact') {
-        setActivePage('contact');
-        setSelectedServiceId(null);
-      } else if (hash === '#faq') {
-        setActivePage('faq');
-        setSelectedServiceId(null);
-      } else if (hash.startsWith('#blog')) {
-        const parts = hash.split('/');
-        if (parts.length > 1 && parts[1]) {
-          setSelectedBlogSlug(parts[1]);
-        } else {
-          setSelectedBlogSlug(null);
-        }
-        setActivePage('blog');
-        setSelectedServiceId(null);
-      } else if (hash === '#privacy-policy') {
-        setActivePage('privacy-policy');
-        setSelectedServiceId(null);
-      } else if (hash === '#terms') {
-        setActivePage('terms');
-        setSelectedServiceId(null);
-      } else if (hash === '#refund-policy') {
-        setActivePage('refund-policy');
         setSelectedServiceId(null);
       } else {
         setActivePage('404');
       }
-    };
+    } else if (pathname === '/about') {
+      setActivePage('about');
+      setSelectedServiceId(null);
+    } else if (pathname === '/contact') {
+      setActivePage('contact');
+      setSelectedServiceId(null);
+    } else if (pathname === '/faq') {
+      setActivePage('faq');
+      setSelectedServiceId(null);
+    } else if (pathname.startsWith('/blog')) {
+      const parts = pathname.split('/');
+      if (parts.length > 2 && parts[2]) {
+        setSelectedBlogSlug(parts[2]);
+      } else {
+        setSelectedBlogSlug(null);
+      }
+      setActivePage('blog');
+      setSelectedServiceId(null);
+    } else if (pathname === '/privacy-policy') {
+      setActivePage('privacy-policy');
+      setSelectedServiceId(null);
+    } else if (pathname === '/terms') {
+      setActivePage('terms');
+      setSelectedServiceId(null);
+    } else if (pathname === '/refund-policy') {
+      setActivePage('refund-policy');
+      setSelectedServiceId(null);
+    } else {
+      setActivePage('404');
+    }
+  };
 
-    handleHashRouting();
-    window.addEventListener('hashchange', handleHashRouting);
-    return () => window.removeEventListener('hashchange', handleHashRouting);
+  // Handle URL Path & PopState routing
+  useEffect(() => {
+    handleRouting();
+    window.addEventListener('popstate', handleRouting);
+    window.addEventListener('hashchange', handleRouting);
+    return () => {
+      window.removeEventListener('popstate', handleRouting);
+      window.removeEventListener('hashchange', handleRouting);
+    };
   }, []);
 
   // Filtered & sorted services list for catalog
@@ -210,26 +253,28 @@ export default function App() {
   const handleSelectService = (serviceId: string) => {
     const found = getServiceByIdOrSlug(serviceId);
     if (found) {
-      window.location.hash = `#service/${found.slug}`;
+      navigateTo(`/service/${found.slug}`);
     }
   };
 
   const handleSelectCategory = (cat: CategoryType) => {
     setActiveCategory(cat);
-    if (activePage !== 'catalog') {
-      window.location.hash = `#category/${cat}`;
+    if (cat === 'all') {
+      navigateTo('/');
+    } else {
+      navigateTo(`/category/${cat}`);
     }
   };
 
   const handleGoHome = () => {
-    window.location.hash = '';
+    navigateTo('/');
     setActivePage('catalog');
     setSelectedServiceId(null);
     setSearchQuery('');
   };
 
-  const handleNavigateToPage = (hash: string) => {
-    window.location.hash = hash;
+  const handleNavigateToPage = (path: string) => {
+    navigateTo(path);
   };
 
   const currentService = selectedServiceId ? getServiceByIdOrSlug(selectedServiceId) : null;
@@ -322,7 +367,7 @@ export default function App() {
         ) : activePage === 'contact' ? (
           <ContactPage
             onNavigateHome={handleGoHome}
-            onNavigateToFaq={() => handleNavigateToPage('#faq')}
+            onNavigateToFaq={() => handleNavigateToPage('/faq')}
           />
         ) : activePage === 'faq' ? (
           <FaqPage onNavigateHome={handleGoHome} />
@@ -330,11 +375,11 @@ export default function App() {
           <BlogPage
             selectedArticleSlug={selectedBlogSlug || undefined}
             onSelectArticle={(slug) => {
-              window.location.hash = `#blog/${slug}`;
+              navigateTo(`/blog/${slug}`);
             }}
             onSelectService={handleSelectService}
             onBackToBlogList={() => {
-              window.location.hash = '#blog';
+              navigateTo('/blog');
             }}
           />
         ) : activePage === 'privacy-policy' || activePage === 'terms' || activePage === 'refund-policy' ? (
@@ -347,9 +392,9 @@ export default function App() {
                 : 'refund'
             }
             onSelectPolicy={(p) => {
-              if (p === 'privacy') window.location.hash = '#privacy-policy';
-              else if (p === 'terms') window.location.hash = '#terms';
-              else window.location.hash = '#refund-policy';
+              if (p === 'privacy') navigateTo('/privacy-policy');
+              else if (p === 'terms') navigateTo('/terms');
+              else navigateTo('/refund-policy');
             }}
             onNavigateHome={handleGoHome}
           />

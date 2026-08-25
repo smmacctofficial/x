@@ -139,7 +139,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             '@type': 'ListItem',
             position: 2,
             name: service.categoryName,
-            item: `https://buymailaccounts.com/#${service.category}`,
+            item: `https://buymailaccounts.com/category/${service.category}`,
           },
           {
             '@type': 'ListItem',

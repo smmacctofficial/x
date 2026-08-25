@@ -8,321 +8,315 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Information Architecture Pages -->
+  <!-- Core Informational & Trust Pages -->
   <url>
-    <loc>https://buymailaccounts.com/#pricing</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#about</loc>
+    <loc>https://buymailaccounts.com/about</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#contact</loc>
+    <loc>https://buymailaccounts.com/contact</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#faq</loc>
+    <loc>https://buymailaccounts.com/faq</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#blog</loc>
+    <loc>https://buymailaccounts.com/blog</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#privacy-policy</loc>
+    <loc>https://buymailaccounts.com/privacy-policy</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#terms</loc>
+    <loc>https://buymailaccounts.com/terms</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#refund-policy</loc>
+    <loc>https://buymailaccounts.com/refund-policy</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
-  <!-- Categories -->
+  <!-- Category Hubs -->
   <url>
-    <loc>https://buymailaccounts.com/#category/other</loc>
+    <loc>https://buymailaccounts.com/category/gmail</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/category/github</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/category/bank</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/category/other</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://buymailaccounts.com/#category/gmail</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#category/github</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#category/bank</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.85</priority>
-  </url>
 
-  <!-- Gmail Category Services (10 items) -->
+  <!-- Gmail Category Service Pages (10 items) -->
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-usa-gmail-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-usa-gmail-accounts</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-pva-gmail-accounts</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-aged-mix-country-gmail-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-pva-gmail-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-aged-gmail-accounts-for-google-ads</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-aged-mix-country-gmail-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-aged-gmail-accounts-for-reviews</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-aged-gmail-accounts-for-google-ads</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-aged-gmail-accounts-for-reviews</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-new-gmail-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-new-gmail-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-gmail-accounts-bulk</loc>
+    <loc>https://buymailaccounts.com/service/buy-gmail-accounts-bulk</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-bulk-fresh-gmail-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-bulk-fresh-gmail-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-old-gmail-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-old-gmail-accounts</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-google-ads-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-google-ads-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- GitHub Category Services (10 items) -->
+  <!-- GitHub Category Service Pages (10 items) -->
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-new-github-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-new-github-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-aged-github-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-aged-github-accounts</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-active-github-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-active-github-accounts</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-github-account-with-followers</loc>
+    <loc>https://buymailaccounts.com/service/buy-github-account-with-followers</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-github-account-with-commits</loc>
+    <loc>https://buymailaccounts.com/service/buy-github-account-with-commits</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-bulk-github-accounts</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-github-account-with-legion</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-github-account-with-authena</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-old-github-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-bulk-github-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-github-student-developer-pack-account</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Bank & Crypto Category Service Pages (7 items) -->
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-verified-paypal-account</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-verified-cash-app-accounts</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-verified-chase-bank-accounts</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-verified-relay-bank-accounts</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/service/buy-verified-kraken-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-github-account-with-legion</loc>
+    <loc>https://buymailaccounts.com/service/buy-verified-redotpay-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-github-account-with-authena</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-old-github-accounts</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-github-student-developer-pack-account</loc>
+    <loc>https://buymailaccounts.com/service/buy-verified-crypto-bank-bundle</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Bank & Crypto Category Services (7 items) -->
+  <!-- Other & Social Media Category Service Pages (8 items) -->
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-verified-paypal-account</loc>
+    <loc>https://buymailaccounts.com/service/buy-outlook-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-verified-cash-app-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-hotmail-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-verified-chase-bank-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-google-voice-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-verified-relay-bank-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-edu-mail-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-verified-kraken-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-facebook-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-verified-redotpay-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-linkedin-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-verified-crypto-bank-bundle</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Other & Social Media Category Services (8 items) -->
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-outlook-accounts</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-hotmail-accounts</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-google-voice-accounts</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-edu-mail-accounts</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-facebook-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-whatsapp-account-numbers</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#service/buy-linkedin-accounts</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-whatsapp-account-numbers</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#service/buy-telegram-accounts</loc>
+    <loc>https://buymailaccounts.com/service/buy-telegram-accounts</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Blog Topical Pillar Articles -->
+  <!-- Blog Informational & SEO Pillar Articles -->
   <url>
-    <loc>https://buymailaccounts.com/#blog/cold-email-warmup-guide-aged-gmail</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://buymailaccounts.com/#blog/github-developer-accounts-with-commits</loc>
+    <loc>https://buymailaccounts.com/blog/cold-email-warmup-guide-aged-gmail</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#blog/antidetect-browsers-residential-proxies</loc>
+    <loc>https://buymailaccounts.com/blog/github-developer-accounts-with-commits</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://buymailaccounts.com/#blog/pva-vs-non-pva-email-deliverability</loc>
+    <loc>https://buymailaccounts.com/blog/antidetect-browsers-residential-proxies</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://buymailaccounts.com/blog/pva-vs-non-pva-email-deliverability</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -28,11 +28,13 @@ export const Footer: React.FC<FooterProps> = ({
   onSelectService,
   onNavigateToPage
 }) => {
-  const handleNav = (hash: string) => {
+  const handleNav = (pathOrHash: string) => {
     if (onNavigateToPage) {
-      onNavigateToPage(hash);
+      onNavigateToPage(pathOrHash);
     } else {
-      window.location.hash = hash;
+      const cleanPath = pathOrHash.startsWith('#') ? pathOrHash.replace('#', '/') : pathOrHash;
+      window.history.pushState({}, '', cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`);
+      window.dispatchEvent(new PopStateEvent('popstate'));
     }
   };
 
@@ -164,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="space-y-2 text-xs font-medium">
               <li>
                 <button
-                  onClick={() => handleNav('#faq')}
+                  onClick={() => handleNav('/faq')}
                   className="text-slate-600 hover:text-indigo-600 transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <HelpCircle className="w-3 h-3 text-slate-400" />
@@ -173,7 +175,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('#blog')}
+                  onClick={() => handleNav('/blog')}
                   className="text-slate-600 hover:text-indigo-600 transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <BookOpen className="w-3 h-3 text-slate-400" />
@@ -182,7 +184,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('#about')}
+                  onClick={() => handleNav('/about')}
                   className="text-slate-600 hover:text-indigo-600 transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <ShieldCheck className="w-3 h-3 text-slate-400" />
@@ -191,7 +193,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('#contact')}
+                  onClick={() => handleNav('/contact')}
                   className="text-slate-600 hover:text-indigo-600 transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <Send className="w-3 h-3 text-slate-400" />
@@ -200,7 +202,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('#refund-policy')}
+                  onClick={() => handleNav('/refund-policy')}
                   className="text-emerald-700 hover:text-emerald-800 font-bold transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <RefreshCw className="w-3 h-3 text-emerald-600" />
@@ -209,7 +211,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('#privacy-policy')}
+                  onClick={() => handleNav('/privacy-policy')}
                   className="text-slate-600 hover:text-indigo-600 transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <Lock className="w-3 h-3 text-slate-400" />
@@ -218,7 +220,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('#terms')}
+                  onClick={() => handleNav('/terms')}
                   className="text-slate-600 hover:text-indigo-600 transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <FileText className="w-3 h-3 text-slate-400" />
