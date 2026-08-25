@@ -1,0 +1,6 @@
+{
+  "name": "BuyMailAccounts - Buy Verified & Aged Accounts",
+  "description": "Premium marketplace to buy verified Gmail, PVA, Aged, GitHub, Bank (PayPal, Cash App, Chase, Relay), and Social Media Accounts with instant 24/7 delivery and crypto checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

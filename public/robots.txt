@@ -1,0 +1,25 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+Disallow: /api/
+Disallow: /admin
+
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+Disallow: /api/
+
+# Bingbot specific directives
+User-agent: Bingbot
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+Disallow: /api/
+
+# Host and Sitemap
+Host: https://buymailaccounts.com
+Sitemap: https://buymailaccounts.com/sitemap.xml
