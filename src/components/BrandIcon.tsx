@@ -6,7 +6,14 @@ interface BrandIconProps {
   size?: number;
 }
 
-export const BrandIcon: React.FC<BrandIconProps> = ({ name, className = 'w-6 h-6' }) => {
+export const BrandIcon: React.FC<BrandIconProps> = ({ name = '', className = 'w-6 h-6' }) => {
+  if (!name || typeof name !== 'string') {
+    return (
+      <div className={`${className} rounded bg-indigo-600 flex items-center justify-center text-white font-bold text-xs`}>
+        BM
+      </div>
+    );
+  }
   const iconLower = name.toLowerCase();
 
   if (iconLower.includes('gmail') || iconLower === 'google') {
